@@ -2,6 +2,7 @@ site_name: Lucy's Plugins
 theme:
   name: null
   custom_dir: 'cinder'
+  disable_nav_previous_next: true
 nav:
   - LucyCommonLib: commonlib.md
   - ProNouns: pronouns.md
