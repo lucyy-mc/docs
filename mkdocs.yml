@@ -1,0 +1,7 @@
+site_name: Lucy's Plugins
+theme:
+  name: null
+  custom_dir: 'cinder'
+nav:
+  - LucyCommonLib: commonlib.md
+  - ProNouns: pronouns.md
