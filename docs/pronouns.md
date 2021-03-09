@@ -9,7 +9,7 @@ Sets the sender's pronouns ([see below](#setting-your-pronouns)).
 #### /pronouns show [user]
 Shows a player's pronouns.
 
-- user (optional) - the user to show pronouns before. Defaults to the sender.
+- user (optional) - the user to show pronouns for. Defaults to the sender.
 
 #### /pronouns clear
 Clears the sender's pronouns.
