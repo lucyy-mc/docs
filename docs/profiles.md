@@ -13,6 +13,14 @@ Show a user's profile.
 #### /profile clear <field>
 Clears a field.
 
+#### /profile setother <user> <field> <value>
+Sets a field for another user.
+- Requires the permission profiles.moderator
+
+#### /profile clearother <user> <field>
+Clears a field for another user.
+- Requires the permission profiles.moderator
+
 #### /profile version
 Shows the plugin's name, version, author, and LucyCommonLib version.
 
@@ -72,3 +80,10 @@ pronouns, and discord. Of course, there's no need to keep these fields, you can 
     			format: '%vault_prefix%'
     
 **NOTE: if you're using PlaceholderAPI, you MUST wrap your format in quotes! This is due to a restriction of YAML.**
+
+I do appreciate this is kinda complicated. If you'd like some help with it, feel free to join my support Discord server at https://support.lucyy.me. I'd love to help you!
+
+# Developer API
+
+Docs for the API aren't done yet, [join my discord server](https://support.lucyy.me) and I'll walk you through using it.
+It can both interact with profile fields and create custom field types.
