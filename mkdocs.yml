@@ -6,3 +6,4 @@ theme:
 nav:
   - LucyCommonLib: commonlib.md
   - ProNouns: pronouns.md
+  - ProFiles: profiles.md
