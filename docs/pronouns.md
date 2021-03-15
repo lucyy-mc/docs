@@ -101,3 +101,57 @@ Some examples using the she/her pronoun set:
 
 - %pronouns_subjective_upper% - SHE
 - %pronoun_possessivepro_capital% - Hers
+
+# Developer API
+![](https://img.shields.io/nexus/r/me.lucyy/pronouns-api?label=version&server=https://repo.lucyy.me&color=#fd0)
+
+<https://javadoc.lucyy.me/pronouns/latest>
+
+ProNouns exposes an API for Java plugin developers to use. Versioning works slightly differently for the API - the major and minor versions must match the plugin versions. For example, API v1.0 works on 1.0.0-RC1, 1.0.0, 1.0.5 etc, but not 1.5.x.
+
+## Including
+
+Include with Maven as follows:
+
+```xml
+<repositories>
+    ...
+    <repository>
+        <id>lucy</id>
+        <url>https://repo.lucyy.me/repository/public/</url>
+    </repository>
+    ...
+</repositories>
+
+<dependencies>
+    ...
+    <dependency>
+        <groupId>me.lucyy</groupId>
+        <artifactId>pronouns-api</artifactId>
+        <version><VERSION></version>
+        <scope>provided</scope>
+    </dependency>
+    ...
+</dependencies>
+```
+
+Or with Gradle:
+
+```kotlin
+repositories {
+	maven { url "https://repo.lucyy.me/repository/public/" }
+}
+
+dependencies {
+	compileOnly 'me.lucyy:pronouns-api:VERSION'
+}
+```
+
+## Getting an instance
+
+Get an instance of `PronounHandler` using the `RegisteredServiceProvider`:
+
+```java
+RegisteredServiceProvider<PronounHandler> rsp = getServer().getServicesManager().getRegistration(PronounHandler.class);
+PronounHandler handler = rsp.getProvider();
+```
