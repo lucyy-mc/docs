@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    
+    <title>LucyCommonLib - Lucy's Plugins</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin'
+          rel='stylesheet' type='text/css'>
+    <link href="../css/bootstrap-custom.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/cinder.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+    
+
+     
+</head>
+
+<body
+>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="..">Lucy's Plugins</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li class="active">
+                        <a href="./">LucyCommonLib</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../pronouns/">ProNouns</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../profiles/">ProFiles</a>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    
+    
+    <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#formatting-text">Formatting text</a></li>
+            <li class="second-level"><a href="#using-hex-codes">Using hex codes</a></li>
+                
+            <li class="second-level"><a href="#gradients">Gradients</a></li>
+                
+                <li class="third-level"><a href="#rgb">RGB</a></li>
+                <li class="third-level"><a href="#hsv">HSV</a></li>
+            <li class="second-level"><a href="#setting-a-plugins-accent-colour">Setting a plugin's accent colour</a></li>
+                
+    </ul>
+</div></div>
+    <div class="col-md-9" role="main">
+
+<h1 id="formatting-text">Formatting text</h1>
+<p>You've probably been linked here from one of my plugins. The recent update to ProNouns and the upcoming release of ProFiles (coming soon, <a href="https://support.lucyy.me">join my discord for more info!</a>) has completely reworked how text is displayed. Now you can use hex colours and both RGB and HSV gradients in your text. Isn't that fancy?</p>
+<p>The syntax is very similar to that of the popular core plugin CMI.</p>
+<h3 id="using-hex-codes">Using hex codes</h3>
+<p>To specify a single hex colour, type it out like this:</p>
+<pre><code>{#ff00ff}This text will be bright pink!
+</code></pre>
+<p>It behaves in the same way as vanilla format codes.</p>
+<h3 id="gradients">Gradients</h3>
+<p>This is where the real fun starts! LucyCommonLib, and by extension all my plugins, support two types of gradient:</p>
+<h4 id="rgb">RGB</h4>
+<p>RGB is is your "standard gradient". You give it two hex codes, it fades between them.</p>
+<pre><code>{#ff0000&gt;}this text will start as red but fade into yellow!{#ffff00&lt;}
+</code></pre>
+<p>You can also specify extra formatting tokens to make the gradient bold, italic, etc. These are the same letters as you'd use in vanilla:</p>
+<pre><code>{#ff00ff:lo&gt;}this is the same but bold ('l') and italic (o)!{#ffff00&lt;}
+</code></pre>
+<h4 id="hsv">HSV</h4>
+<p>HSV (not to be confused with HSL) is where things start to get exciting. Instead of fading between red, green and blue, this type fades between two hues, keeping the saturation and value consistent. This creates a nice, uniform look if set up right. It's a little more complicated than RGB.</p>
+<pre><code>{hsv:00aaff&gt;}this text will be a nice pastel rainbow, isn't that cool?{ff&lt;}
+</code></pre>
+<p>Let's break this down.
+First of all, what does <code>00aaff</code> mean? It helps to have an understanding of how hexadecimal works for this part. Each value here is a two-digit hexadecimal number, in the range of (decimal) 0-255.</p>
+<ul>
+<li>00 - the hue to start at</li>
+<li>aa - the saturation of the gradient</li>
+<li>ff - the value of the gradient</li>
+</ul>
+<p>The number in the closing tag is the hue to finish at. So overall, the above example means "fade this text from hue 00 (zero) to FF (255), keeping a saturation of AA (170) and a value of FF (255).</p>
+<p>As with RGB, you can specify extra formatters:</p>
+<pre><code>{hsl:00aaff:lo&gt;}the same nice pastel rainbow, but bold and italic!{ff&lt;}
+</code></pre>
+<h3 id="setting-a-plugins-accent-colour">Setting a plugin's accent colour</h3>
+<p>All my plugins have a setting for an "accent colour". You can use these codes here too, it just requires a special symbol!
+For hex colours, you don't need to do anything special. If you want bright pink:</p>
+<pre><code>accent: '{#ff00ff}'
+</code></pre>
+<p>is all you need.
+Gradients are a little bit different but overall very simple - all you need to do is replace where the gradient text would normally go with "%s". For example, the default for most of my plugins is:</p>
+<pre><code>accent:  '{#fa9efa&gt;}%s{#9dacfa&lt;}'
+</code></pre>
+<p>I do appreciate this is kinda complicated. If you'd like some help with it, feel free to join my support Discord server at https://support.lucyy.me. I'd love to help you!</p></div>
+    
+    
+</div>
+
+
+<footer class="col-md-12 text-center">
+    
+    
+    <hr>
+    <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>. Theme based on
+            <a href="https://github.com/chrissimpkins/cinder">Cinder</a>.</small>
+    </p>
+    
+
+    
+    
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap-3.0.3.min.js"></script>
+
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>var base_url = {
+{
+    base_url | tojson
+}
+}</script>
+
+<script src="../js/base.js"></script>
+<script src="../search/main.js"></script>
+
+<div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

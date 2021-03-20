@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    
+    <title>ProNouns - Lucy's Plugins</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin'
+          rel='stylesheet' type='text/css'>
+    <link href="../css/bootstrap-custom.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/cinder.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+    
+
+     
+</head>
+
+<body
+>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="..">Lucy's Plugins</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../commonlib/">LucyCommonLib</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="./">ProNouns</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../profiles/">ProFiles</a>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    
+    
+    <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#commands">Commands</a></li>
+            <li class="second-level"><a href="#pronouns-help">/pronouns help</a></li>
+                
+            <li class="second-level"><a href="#pronouns-set-set-set">/pronouns set &lt;set&gt; [set]...</a></li>
+                
+            <li class="second-level"><a href="#pronouns-show-user">/pronouns show [user]</a></li>
+                
+            <li class="second-level"><a href="#pronouns-clear">/pronouns clear</a></li>
+                
+            <li class="second-level"><a href="#pronouns-list">/pronouns list</a></li>
+                
+            <li class="second-level"><a href="#pronouns-preview">/pronouns preview</a></li>
+                
+            <li class="second-level"><a href="#pronouns-version">/pronouns version</a></li>
+                
+            <li class="second-level"><a href="#pronouns-reload">/pronouns reload</a></li>
+                
+            <li class="second-level"><a href="#pronouns-sudo-player-subcommand-args">/pronouns sudo &lt;player&gt; &lt;subcommand&gt; [args]...</a></li>
+                
+        <li class="first-level "><a href="#config-file">Config file</a></li>
+            <li class="second-level"><a href="#accent">accent</a></li>
+                
+            <li class="second-level"><a href="#main">main</a></li>
+                
+            <li class="second-level"><a href="#checkforupdates">checkForUpdates</a></li>
+                
+            <li class="second-level"><a href="#connection">connection</a></li>
+                
+            <li class="second-level"><a href="#mysql">mysql</a></li>
+                
+            <li class="second-level"><a href="#predefinedsets">predefinedSets</a></li>
+                
+        <li class="first-level "><a href="#setting-your-pronouns">Setting your pronouns</a></li>
+        <li class="first-level "><a href="#placeholderapi">PlaceholderAPI</a></li>
+        <li class="first-level "><a href="#developer-api">Developer API</a></li>
+            <li class="second-level"><a href="#including">Including</a></li>
+                
+            <li class="second-level"><a href="#getting-an-instance">Getting an instance</a></li>
+                
+    </ul>
+</div></div>
+    <div class="col-md-9" role="main">
+
+<h1 id="commands">Commands</h1>
+<h4 id="pronouns-help">/pronouns help</h4>
+<p>Shows all available commands available to the sender.</p>
+<h4 id="pronouns-set-set-set">/pronouns set &lt;set&gt; [set]...</h4>
+<p>Sets the sender's pronouns (<a href="#setting-your-pronouns">see below</a>).</p>
+<h4 id="pronouns-show-user">/pronouns show [user]</h4>
+<p>Shows a player's pronouns.</p>
+<ul>
+<li>user (optional) - the user to show pronouns for. Defaults to the sender.</li>
+</ul>
+<h4 id="pronouns-clear">/pronouns clear</h4>
+<p>Clears the sender's pronouns.</p>
+<h4 id="pronouns-list">/pronouns list</h4>
+<p>Lists all predefined pronoun sets.</p>
+<h4 id="pronouns-preview">/pronouns preview</h4>
+<p>Sends a message to the sender, substituting their pronouns.</p>
+<h4 id="pronouns-version">/pronouns version</h4>
+<p>Shows the plugin's name, version, author, and LucyCommonLib version.</p>
+<h4 id="pronouns-reload">/pronouns reload</h4>
+<p>Reloads the config. Note that not all settings are reloaded by this command.</p>
+<ul>
+<li>Requires the permission pronouns.admin</li>
+</ul>
+<h4 id="pronouns-sudo-player-subcommand-args">/pronouns sudo &lt;player&gt; &lt;subcommand&gt; [args]...</h4>
+<p>Executes a subcommand as another player.</p>
+<ul>
+<li>Requires the permission pronouns.admin</li>
+</ul>
+<h1 id="config-file">Config file</h1>
+<h3 id="accent"><code>accent</code></h3>
+<p>A <a href="/commonlib/#setting-a-plugins-accent-colour">LucyCommonLib formatter</a> that formats accent text.</p>
+<p>Default value: <code>'{#fa9efa&gt;}%s{#9dacfa&lt;}'</code> (<code>'&amp;d'</code> in version 1.0.4 and below)</p>
+<h3 id="main"><code>main</code></h3>
+<p>A <a href="/commonlib/#setting-a-plugins-accent-colour">LucyCommonLib formatter</a> that formats main text.</p>
+<p>Default value: <code>'&amp;f'</code></p>
+<h3 id="checkforupdates"><code>checkForUpdates</code></h3>
+<p>Whether to check for updates or not. I'm not entirely sure why you'd want to disable this, but the
+option's there if you want it.</p>
+<p>Default value: <code>true</code></p>
+<h3 id="connection"><code>connection</code></h3>
+<p>How ProNouns should store data. There are two acceptable values for this:</p>
+<ul>
+<li><code>'yml'</code> (default) - stores data in a file. Use this if you're not sure what to use.</li>
+<li><code>'mysql'</code> stores data in a MySQL database. Suitable for BungeeCord servers.</li>
+</ul>
+<h3 id="mysql"><code>mysql</code></h3>
+<p>These values will be ignored if MySQL is not being used.</p>
+<ul>
+<li><code>host</code> - default is <code>'127.0.0.1'</code></li>
+<li><code>port</code> - default is <code>3306</code></li>
+<li><code>database</code> - default is <code>pronouns</code></li>
+<li><code>username</code> - default is <code>pronouns</code></li>
+<li><code>password</code> - default is <code>password</code> (please don't use this as a password!)</li>
+</ul>
+<h3 id="predefinedsets"><code>predefinedSets</code></h3>
+<p>Add extra pronoun sets to the predefined list. This means users can type out the set like they would
+with the defaults (he/she/they). Default is <code>[]</code> (empty). Sets should be written out in the standard
+full-set (6) format (<a href="#setting-your-pronouns">see below</a>).</p>
+<h1 id="setting-your-pronouns">Setting your pronouns</h1>
+<p>Pronoun sets can be specified in a number of formats.</p>
+<ul>
+<li><code>they</code></li>
+<li><code>they/them</code></li>
+<li><code>she/they</code> (more sets can be chained like this)</li>
+<li><code>they/them/they're/their/theirs/themself</code> - this is the "full format". This format will <strong>always work</strong> -
+if you're using neopronouns and the admins haven't added your pronouns, this is how you do it!</li>
+</ul>
+<h1 id="placeholderapi">PlaceholderAPI</h1>
+<p>ProNouns provides some PlaceholderAPI placeholders. Note that these are embedded into the plugin, so no
+ecloud expansion is needed.</p>
+<ul>
+<li>%pronouns_pronouns% - pronouns, in the Subjective/Objective format ie She/Her </li>
+<li>%pronouns_subjective% - subjective pronoun</li>
+<li>%pronouns_objective% - objective pronoun</li>
+<li>%pronouns_progressive% - progressive pronoun</li>
+<li>%pronouns_possessiveadj% - possessive adjective</li>
+<li>%pronouns_possessivepro% - possessive pronoun</li>
+<li>%pronouns_reflexive% - reflexive pronouns</li>
+<li>%pronouns_all% - all 6 pronouns</li>
+</ul>
+<p>All placeholders also have some formatting modifiers that can be added to the end of the name to control capitalisation:</p>
+<ul>
+<li>upper - uppercase (SHE)</li>
+<li>lower - lowercase (she)</li>
+<li>capital - first letter uppercase, everything else lowercase (She)</li>
+</ul>
+<p>Some examples using the she/her pronoun set:</p>
+<ul>
+<li>%pronouns_subjective_upper% - SHE</li>
+<li>%pronoun_possessivepro_capital% - Hers</li>
+</ul>
+<h1 id="developer-api">Developer API</h1>
+<p><img alt="" src="https://img.shields.io/nexus/r/me.lucyy/pronouns-api?label=version&amp;server=https://repo.lucyy.me&amp;color=#fd0" /></p>
+<p><a href="https://javadoc.lucyy.me/pronouns/latest">https://javadoc.lucyy.me/pronouns/latest</a></p>
+<p>ProNouns exposes an API for Java plugin developers to use. Versioning works slightly differently for the API - the major and minor versions must match the plugin versions. For example, API v1.0 works on 1.0.0-RC1, 1.0.0, 1.0.5 etc, but not 1.5.x.</p>
+<h2 id="including">Including</h2>
+<p>Include with Maven as follows:</p>
+<pre><code class="language-xml">&lt;repositories&gt;
+    ...
+    &lt;repository&gt;
+        &lt;id&gt;lucy&lt;/id&gt;
+        &lt;url&gt;https://repo.lucyy.me/repository/public/&lt;/url&gt;
+    &lt;/repository&gt;
+    ...
+&lt;/repositories&gt;
+
+&lt;dependencies&gt;
+    ...
+    &lt;dependency&gt;
+        &lt;groupId&gt;me.lucyy&lt;/groupId&gt;
+        &lt;artifactId&gt;pronouns-api&lt;/artifactId&gt;
+        &lt;version&gt;&lt;VERSION&gt;&lt;/version&gt;
+        &lt;scope&gt;provided&lt;/scope&gt;
+    &lt;/dependency&gt;
+    ...
+&lt;/dependencies&gt;
+</code></pre>
+<p>Or with Gradle:</p>
+<pre><code class="language-kotlin">repositories {
+    maven { url &quot;https://repo.lucyy.me/repository/public/&quot; }
+}
+
+dependencies {
+    compileOnly 'me.lucyy:pronouns-api:VERSION'
+}
+</code></pre>
+<h2 id="getting-an-instance">Getting an instance</h2>
+<p>Get an instance of <code>PronounHandler</code> using the <code>RegisteredServiceProvider</code>:</p>
+<pre><code class="language-java">RegisteredServiceProvider&lt;PronounHandler&gt; rsp = getServer().getServicesManager().getRegistration(PronounHandler.class);
+PronounHandler handler = rsp.getProvider();
+</code></pre></div>
+    
+    
+</div>
+
+
+<footer class="col-md-12 text-center">
+    
+    
+    <hr>
+    <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>. Theme based on
+            <a href="https://github.com/chrissimpkins/cinder">Cinder</a>.</small>
+    </p>
+    
+
+    
+    
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap-3.0.3.min.js"></script>
+
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>var base_url = {
+{
+    base_url | tojson
+}
+}</script>
+
+<script src="../js/base.js"></script>
+<script src="../search/main.js"></script>
+
+<div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
