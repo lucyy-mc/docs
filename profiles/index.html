@@ -124,6 +124,13 @@
                 
                 <li class="third-level"><a href="#formataccent">format.accent</a></li>
                 <li class="third-level"><a href="#formatmain">format.main</a></li>
+            <li class="second-level"><a href="#subtitle">subtitle</a></li>
+                
+                <li class="third-level"><a href="#subtitleenabled">subtitle.enabled</a></li>
+            <li class="second-level"><a href="#storage">storage</a></li>
+                
+            <li class="second-level"><a href="#mysql">mysql</a></li>
+                
             <li class="second-level"><a href="#fields">fields</a></li>
                 
                 <li class="third-level"><a href="#field-properties">Field properties</a></li>
@@ -165,6 +172,22 @@
 <h4 id="formatmain"><code>format.main</code></h4>
 <p>A <a href="/commonlib/#setting-a-plugins-accent-colour">LucyCommonLib formatter</a> that formats main text.</p>
 <p>Default value: <code>'&amp;f'</code></p>
+<h3 id="subtitle"><code>subtitle</code></h3>
+<h4 id="subtitleenabled"><code>subtitle.enabled</code></h4>
+<p>Whether to enable the subtitle field, displayed at the top of the profile message. </p>
+<p>Default value: <code>true</code></p>
+<h3 id="storage"><code>storage</code></h3>
+<p>Which storage engine to use. Acceptable values are <code>yml</code> or <code>mysql</code>. If you don't know what to put for this, use <code>yml</code>.</p>
+<p>Default value: <code>yml</code></p>
+<h3 id="mysql"><code>mysql</code></h3>
+<p>MySQL connection info. If <code>storage</code> is not set to <code>mysql</code> then this section is ignored. The keys here are self-explanatory. </p>
+<ul>
+<li><code>mysql.host</code></li>
+<li><code>mysql.port</code></li>
+<li><code>mysql.database</code></li>
+<li><code>mysql.username</code></li>
+<li><code>mysql.password</code></li>
+</ul>
 <h3 id="fields"><code>fields</code></h3>
 <p>This is where the real fun starts. Fields are what make up a profile. By default, there are four fields - name, gender,
 pronouns, and discord. Of course, there's no need to keep these fields, you can set them to whatever you like!</p>
@@ -185,6 +208,16 @@ pronouns, and discord. Of course, there's no need to keep these fields, you can 
 <h4 id="field-types">Field types</h4>
 <ul>
 <li><code>simple</code> - a "typical" field. Users can set this using /profile set, it will show on their profile as you'd expect.</li>
+</ul>
+<p>Simple fields be configured to allow users to use colours in the field, using <a href="/commonlib">the LucyCommonLib formatter syntax</a> 
+(enabled by default). To disable this, set <code>allowColour</code> to false:
+    fields:
+        example:
+            type: simple
+            order: 0
+            displayName: Example Field
+            allowColour: false</p>
+<ul>
 <li><code>pronouns</code> (requires <a href="https://lucyy.me/pronouns">ProNouns</a> to be installed) - shows a user's pronouns. Setting this
   with /profile set will cause a player's pronouns to update as if they set them through ProNouns.</li>
 <li><code>placeholder</code> (requires <a href="https://www.spigotmc.org/resources/placeholderapi.6245/">PlaceholderAPI</a> to be installed) -
