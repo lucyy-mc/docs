@@ -1,5 +1,5 @@
 # Formatting text
-You've probably been linked here from one of my plugins. The recent update to ProNouns and the upcoming release of ProFiles (coming soon, [join my discord for more info!](https://support.lucyy.me)) has completely reworked how text is displayed. Now you can use hex colours and both RGB and HSV gradients in your text. Isn't that fancy?
+You've probably been linked here from one of my plugins. This page will show you how you can format text with RGB and create gradients. 
 
 The syntax is very similar to that of the popular core plugin CMI.
 

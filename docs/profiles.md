@@ -46,6 +46,29 @@ A [LucyCommonLib formatter](/commonlib/#setting-a-plugins-accent-colour) that fo
 
 Default value: `'&f'`
 
+### `subtitle`
+
+#### `subtitle.enabled`
+
+Whether to enable the subtitle field, displayed at the top of the profile message. 
+
+Default value: `true`
+
+### `storage`
+
+Which storage engine to use. Acceptable values are `yml` or `mysql`. If you don't know what to put for this, use `yml`.
+
+Default value: `yml`
+
+### `mysql`
+
+MySQL connection info. If `storage` is not set to `mysql` then this section is ignored. The keys here are self-explanatory. 
+
+- `mysql.host`
+- `mysql.port`
+- `mysql.database`
+- `mysql.username`
+- `mysql.password`
 
 ### `fields`
 
@@ -66,6 +89,16 @@ pronouns, and discord. Of course, there's no need to keep these fields, you can 
 
 #### Field types
 - `simple` - a "typical" field. Users can set this using /profile set, it will show on their profile as you'd expect.
+
+Simple fields be configured to allow users to use colours in the field, using [the LucyCommonLib formatter syntax](/commonlib) 
+(enabled by default). To disable this, set `allowColour` to false:
+	fields:
+		example:
+			type: simple
+			order: 0
+			displayName: Example Field
+			allowColour: false
+
 - `pronouns` (requires [ProNouns](https://lucyy.me/pronouns) to be installed) - shows a user's pronouns. Setting this
   with /profile set will cause a player's pronouns to update as if they set them through ProNouns.
 - `placeholder` (requires [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) to be installed) -
