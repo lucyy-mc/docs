@@ -35,7 +35,7 @@ The number in the closing tag is the hue to finish at. So overall, the above exa
 
 As with RGB, you can specify extra formatters:
 
-	{hsl:00aaff:lo>}the same nice pastel rainbow, but bold and italic!{ff<}
+	{hsv:00aaff:lo>}the same nice pastel rainbow, but bold and italic!{ff<}
 
 ### Setting a plugin's accent colour
 All my plugins have a setting for an "accent colour". You can use these codes here too, it just requires a special symbol!
