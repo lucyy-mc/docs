@@ -79,17 +79,17 @@ Pronoun sets can be specified in a number of formats.
 if you're using neopronouns and the admins haven't added your pronouns, this is how you do it!
   
 # PlaceholderAPI
-ProNouns provides some PlaceholderAPI placeholders. Note that these are embedded into the plugin, so no
-ecloud expansion is needed.
+ProNouns provides some PlaceholderAPI placeholders. As of version 1.1.0, an eCloud expansion is needed to use them.
+Install it with `/papi ecloud download pronouns` followed by `/papi reload`. 
 
-- %pronouns_pronouns% - pronouns, in the Subjective/Objective format ie She/Her 
-- %pronouns_subjective% - subjective pronoun
-- %pronouns_objective% - objective pronoun
-- %pronouns_progressive% - progressive pronoun
-- %pronouns_possessiveadj% - possessive adjective
-- %pronouns_possessivepro% - possessive pronoun
-- %pronouns_reflexive% - reflexive pronouns
-- %pronouns_all% - all 6 pronouns
+- `%pronouns_pronouns%` - pronouns, in the Subjective/Objective format ie She/Her 
+- `%pronouns_subjective%` - subjective pronoun
+- `%pronouns_objective%` - objective pronoun
+- `%pronouns_progressive%` - progressive pronoun
+- `%pronouns_possessiveadj%` - possessive adjective
+- `%pronouns_possessivepro%` - possessive pronoun
+- `%pronouns_reflexive%` - reflexive pronouns
+- `%pronouns_all%` - all 6 pronouns
 
 All placeholders also have some formatting modifiers that can be added to the end of the name to control capitalisation:
 
@@ -99,8 +99,8 @@ All placeholders also have some formatting modifiers that can be added to the en
 
 Some examples using the she/her pronoun set:
 
-- %pronouns_subjective_upper% - SHE
-- %pronoun_possessivepro_capital% - Hers
+- `%pronouns_subjective_upper%` - SHE
+- `%pronoun_possessivepro_capital%` - Hers
 
 # Developer API
 ![](https://img.shields.io/nexus/r/me.lucyy/pronouns-api?label=version&server=https://repo.lucyy.me&color=#fd0)
