@@ -69,6 +69,12 @@ Add extra pronoun sets to the predefined list. This means users can type out the
 with the defaults (he/she/they). Default is `[]` (empty). Sets should be written out in the standard
 full-set (6) format ([see below](#setting-your-pronouns)).
 
+### `filter`
+Settings related to the filter.
+
+- `enabled` - whether the filter is enabled or not
+- `patterns` - a list of regex patterns that will be blocked. Very minimal by default.
+
 # Setting your pronouns
 Pronoun sets can be specified in a number of formats.
 
