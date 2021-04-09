@@ -1,6 +1,6 @@
 I’ve been asked by a few people why I decided to move away from Spigot. I’m probably going to end up pissing people off with this, or completely destroying my reputation, but I don’t care anymore. I’ve got nothing to lose, it’s all been deleted by Spigot staff lmao
 
-Everything here is my own opinion. I have nothing against any of the Spigot staff personally.
+This is mostly just me venting, I may or may not come back and refine this at some point. Everything here is my own opinion. I have nothing against any of the Spigot staff personally.
 
 <rant\>
 
