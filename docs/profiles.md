@@ -101,6 +101,8 @@ Simple fields be configured to allow users to use colours in the field, using [t
 
 - `pronouns` (requires [ProNouns](https://lucyy.me/pronouns) to be installed) - shows a user's pronouns. Setting this
   with /profile set will cause a player's pronouns to update as if they set them through ProNouns.
+- `discordsrv` (requires [DiscordSRV](https://www.spigotmc.org/resources/discordsrv.18494/) - show's a user's linked
+  Discord account.
 - `placeholder` (requires [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) to be installed) -
   shows the value of a placeholder. These cannot be set using /profile set. To specify a placeholder to display,
   set the "format" property of the field, like so (this example shows a user's Vault prefix):
