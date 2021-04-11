@@ -4,8 +4,13 @@ Plugins built on LucyCommonLib 1.4.0 and above (ProNouns 1.1.1+, ProFiles 1.0.4+
 [Adventure](https://github.com/KyoriPowered/adventure) to provide formatting. There are a number of ways of getting Adventure depending on the version of LucyCommonLib that your plugin is built against.
 
 ### Finding the LucyCommonLib version
-Run the command `/<plugin> version` ingame:
-![Finding LucyCommonLib version](/adventure-lcl.png)
+
+Plugin  | Version
+------- | -------
+ProNouns 1.1.1 | 1.4.1
+ProNouns 1.2.0 | 1.6.1
+ProFiles 1.0.4 | 1.5.0
+
 
 **Ignore any letters after the number.**
 
