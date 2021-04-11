@@ -78,6 +78,12 @@
                 
                 
                     <li >
+                        <a href="../pronouns-discord.md">ProNouns-Discord</a>
+                    </li>
+                
+                
+                
+                    <li >
                         <a href="../profiles/">ProFiles</a>
                     </li>
                 
@@ -107,7 +113,11 @@
     <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="first-level active"><a href="#adventure">Adventure</a></li>
-            <li class="second-level"><a href="#for-the-time-being-craftbukkit-and-spigot-arent-supported">For the time being, CraftBukkit and Spigot aren't supported.</a></li>
+            <li class="second-level"><a href="#finding-the-lucycommonlib-version">Finding the LucyCommonLib version</a></li>
+                
+            <li class="second-level"><a href="#installupdate-paper-recommended-all-versions">Install/update Paper (recommended, all versions)</a></li>
+                
+            <li class="second-level"><a href="#install-the-adventure-plugin-lucycommonlib-160">Install the Adventure plugin (LucyCommonLib 1.6.0+)</a></li>
                 
     </ul>
 </div></div>
@@ -115,11 +125,15 @@
 
 <h2 id="adventure">Adventure</h2>
 <p>Plugins built on LucyCommonLib 1.4.0 and above (ProNouns 1.1.1+, ProFiles 1.0.4+) depend on 
-<a href="https://github.com/KyoriPowered/adventure">Adventure</a> to provide formatting. Currently the only way to
-install it is to upgrade to <strong>a recent version of Paper</strong> (473 or above) or a fork such as Tuinity or Purpur.</p>
-<h4 id="for-the-time-being-craftbukkit-and-spigot-arent-supported">For the time being, CraftBukkit and Spigot aren't supported.</h4>
-<p>I am looking into ways to support these, but for the time being, stick to Paper. I can almost guarantee
-that you will benefit from upgrading anyway.</p></div>
+<a href="https://github.com/KyoriPowered/adventure">Adventure</a> to provide formatting. There are a number of ways of getting Adventure depending on the version of LucyCommonLib that your plugin is built against.</p>
+<h3 id="finding-the-lucycommonlib-version">Finding the LucyCommonLib version</h3>
+<p>Run the command <code>/&lt;plugin&gt; version</code> ingame:
+<img alt="Finding LucyCommonLib version" src="/adventure-lcl.png" /></p>
+<p><strong>Ignore any letters after the number.</strong></p>
+<h3 id="installupdate-paper-recommended-all-versions">Install/update Paper (recommended, all versions)</h3>
+<p>Upgrade to <strong>a recent version of Paper</strong> (473 or above) or a fork such as Tuinity or Purpur.</p>
+<h3 id="install-the-adventure-plugin-lucycommonlib-160">Install the Adventure plugin (LucyCommonLib 1.6.0+)</h3>
+<p>This method works on Spigot and CraftBukkit. I have put together a small plugin that provides Adventure. Download the latest version <a href="https://github.com/lucyy-mc/adventure-bukkit/releases/tag/4.7.0">here</a> and install it like any other plugin. This method may allow my plugins to run on older versions of Minecraft, but be aware no support is provided for this.</p></div>
     
     
 </div>
