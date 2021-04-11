@@ -1,9 +1,16 @@
 ## Adventure
 
 Plugins built on LucyCommonLib 1.4.0 and above (ProNouns 1.1.1+, ProFiles 1.0.4+) depend on 
-[Adventure](https://github.com/KyoriPowered/adventure) to provide formatting. Currently the only way to
-install it is to upgrade to **a recent version of Paper** (473 or above) or a fork such as Tuinity or Purpur.
+[Adventure](https://github.com/KyoriPowered/adventure) to provide formatting. There are a number of ways of getting Adventure depending on the version of LucyCommonLib that your plugin is built against.
 
-#### For the time being, CraftBukkit and Spigot aren't supported.
-I am looking into ways to support these, but for the time being, stick to Paper. I can almost guarantee
-that you will benefit from upgrading anyway.
+### Finding the LucyCommonLib version
+Run the command `/<plugin> version` ingame:
+![Finding LucyCommonLib version](/adventure-lcl.png)
+
+**Ignore any letters after the number.**
+
+### Install/update Paper (recommended, all versions)
+Upgrade to **a recent version of Paper** (473 or above) or a fork such as Tuinity or Purpur.
+
+### Install the Adventure plugin (LucyCommonLib 1.6.0+)
+This method works on Spigot and CraftBukkit. I have put together a small plugin that provides Adventure. Download the latest version [here](https://github.com/lucyy-mc/adventure-bukkit/releases/tag/4.7.0) and install it like any other plugin. This method may allow my plugins to run on older versions of Minecraft, but be aware no support is provided for this.

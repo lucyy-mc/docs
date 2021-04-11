@@ -6,5 +6,6 @@ theme:
 nav:
   - LucyCommonLib: commonlib.md
   - ProNouns: pronouns.md
+  - ProNouns-Discord: pronouns-discord.md
   - ProFiles: profiles.md
   - Support: "https://support.lucyy.me"
